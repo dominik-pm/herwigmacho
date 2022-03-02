@@ -11,8 +11,8 @@ export default function Home() {
   const [phrase, setPhrase] = useState('')
 
   useEffect(async () => {
-    const response = fetch("./worddata.json")
-    const jsonData = await response.json()
+    const response = await fetch("./worddata.json")
+    const jsonData = response.json()
 
     setWorddata(jsonData)
   }, [])
