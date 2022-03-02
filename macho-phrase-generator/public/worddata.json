@@ -4,18 +4,16 @@
         { "word": "schnellzug", "gender": "m" },
         { "word": "suppn", "gender": "f" },
         { "word": "papst", "gender": "m" },
-        { "word": "geldbörsl", "gender": "m" }
+        { "word": "bam", "gender": "m" },
+        { "word": "woid", "gender": "m" }
     ],
     "phrases": [
         "A {noun} is ka {noun}",
         "A {noun} wiad ned so heiß gessn wie's gekocht wiad",
         "Glauben hast nix wissen",
-        "Wissen hast nix wissen",
-        "Samma nd päpstlicher ois da {noun_m}",
         "Samma nd päpstlicher ois d {noun_f}",
-        "Stimmts oder hob i an {noun_m}",
         "Stimmts oder hob i a {noun_f}",
         "Zreisn sois di und s'{noun_m} zu mia fliagn",
-        "Zreisn sois di und d'{noun_f} zu mia fliagn"
+        "I siach vor lauter {noun_m} in {noun_m} nimma"
     ]
 }
