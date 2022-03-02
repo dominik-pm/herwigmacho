@@ -1,19 +1,20 @@
 {
     "nouns": [
-        { "word": "oida mau", "gender": "m" },
-        { "word": "schnellzug", "gender": "m" },
-        { "word": "suppn", "gender": "f" },
-        { "word": "papst", "gender": "m" },
-        { "word": "bam", "gender": "m" },
-        { "word": "woid", "gender": "m" }
+        { "word": "oida mau", "article_d": "da", "article_e": "an", "gender": "male" },
+        { "word": "schnellzug", "article_d": "da", "article_e": "an", "gender": "male"  },
+        { "word": "suppn", "article_d": "de", "article_e": "a", "gender": "female"  },
+        { "word": "papst", "article_d": "da", "article_e": "an", "gender": "male"  },
+        { "word": "bam", "article_d": "da", "article_e": "an", "gender": "male"  },
+        { "word": "woid", "article_d": "da", "article_e": "an", "gender": "male"  },
+        { "word": "gödbersl", "article_d": "'s", "article_e": "a", "gender": "thing"  }
     ],
     "phrases": [
         "A {noun} is ka {noun}",
         "A {noun} wiad ned so heiß gessn wie's gekocht wiad",
         "Glauben hast nix wissen",
-        "Samma nd päpstlicher ois d {noun_f}",
-        "Stimmts oder hob i a {noun_f}",
-        "Zreisn sois di und s'{noun_m} zu mia fliagn",
-        "I siach vor lauter {noun_m} in {noun_m} nimma"
+        "Samma nd päpstlicher ois {noun:article_d}",
+        "Stimmts oder hob i {noun:article_e}",
+        "Zreisn sois di und {noun:article_d} zu mia fliagn",
+        "I siach vor lauter {noun} in {noun:gender_male} nimma"
     ]
 }
