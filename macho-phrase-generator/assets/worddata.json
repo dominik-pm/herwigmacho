@@ -1,0 +1,19 @@
+{
+    "nouns": [
+        { "word": "oida mau", "gender": "m" },
+        { "word": "schnellzug", "gender": "m" },
+        { "word": "suppn", "gender": "f" },
+        { "word": "papst", "gender": "m" },
+        { "word": "geldbörsl", "gender": "m" },
+    ],
+    "phrases": [
+        "A {noun} is ka {noun}",
+        "A {noun} wiad ned so heiß gessn wie's gekocht wiad",
+        "Glauben hast nix wissen",
+        "Wissen hast nix wissen",
+        "Samma nd päpstlicher ois da {noun}",
+        "Stimmts oder hob i {noun}",
+        "Zreisn sois di und s'{noun_m} zu mia fliagn",
+        "Zreisn sois di und d'{noun_f} zu mia fliagn"
+    ]
+}
