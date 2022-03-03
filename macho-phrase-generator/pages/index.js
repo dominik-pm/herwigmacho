@@ -10,6 +10,7 @@ export default function Home() {
 
     const [worddata, setWorddata] = useState('')
     const [phrase, setPhrase] = useState('')
+    const [maxCombinations, setMaxCombinations] = useState(0)
 
     useEffect(async () => {
         const response = await fetch("./worddata.json")
@@ -36,13 +37,58 @@ export default function Home() {
             return
         }
 
-        console.log(phrases)
-
-        const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)]
+        let randomPhrase = getRandomPhrase(phrases)
         console.log(randomPhrase)
-        let phrase = 'test'
+
+        randomPhrase.split(' ').forEach(w => {
+            if (w[0] == '{') {
+                let word = ''
+
+                const command = w.replace('{', '').replace('}', '')
+                console.log('command:' + command)
+                const args = command.split(':')
+                const type = args[0]
+                let wordData = {}
+                console.log('type: ' + type);
+                switch (type) {
+                    case 'noun':
+                        wordData = getRandomNoun(nouns)
+                        break
+                    default:
+                        break
+                }
+                console.log('worddata:', wordData)
+
+                if (wordData) {
+                    word = wordData['word']
+                    console.log('word:', word)
+
+                    if (args[1]) {
+                        switch (args[1]) {
+                            case 'article_d':
+                                word = `${wordData['article_d']} ${word}`
+                                break
+                            case 'article_e':
+                                word = `${wordData['article_e']} ${word}`
+                                break
+                            default:
+                                break
+                        }
+                    }
+                }
+
+                // w = word
+                randomPhrase = randomPhrase.replace(w, word)
+            }
+        })
 
         setPhrase(randomPhrase)
+    }
+    function getRandomNoun(nouns) {
+        return nouns[Math.floor(Math.random() * nouns.length)]
+    }
+    function getRandomPhrase(phrases) {
+        return phrases[Math.floor(Math.random() * phrases.length)]
     }
 
     return (
@@ -66,9 +112,9 @@ export default function Home() {
 
             {/* Phrase Container */}
             <Grid container width="100%" direction="column" alignItems="center">
-                <Grid item width="80%">
+                <Grid item>
                     <Button onClick={generatePhrase} sx={{textTransform: 'none'}}>
-                        <Phrase text={phrase}></Phrase>
+                        <Phrase text={phrase} maxCount={maxCombinations}></Phrase>
                     </Button>
                 </Grid>
             </Grid>
