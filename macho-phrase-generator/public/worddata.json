@@ -1,6 +1,6 @@
 {
     "nouns": [
-        { "word": "oida mau", "article_d": "a", "article_e": "an", "gender": "male" },
+        { "word": "mau", "word_d": "oida", "word_e": "oidn", "article_d": "a", "article_e": "an", "gender": "male" },
         { "word": "schnellzug", "article_d": "da", "article_e": "an", "gender": "male"  },
         { "word": "suppn", "article_d": "de", "article_e": "a", "gender": "female"  },
         { "word": "papst", "article_d": "da", "article_e": "an", "gender": "male"  },

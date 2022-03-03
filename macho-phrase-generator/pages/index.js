@@ -66,10 +66,12 @@ export default function Home() {
                     if (args[1]) {
                         switch (args[1]) {
                             case 'article_d':
-                                word = `${wordData['article_d']} ${word}`
+                                const d = wordData['word_d']
+                                word = `${wordData['article_d']} ${d ? `${d} ` : ''}${word}`
                                 break
                             case 'article_e':
-                                word = `${wordData['article_e']} ${word}`
+                                const e = wordData['word_e']
+                                word = `${wordData['article_e']} ${e ? `${e} ` : ''}${word}`
                                 break
                             default:
                                 break
