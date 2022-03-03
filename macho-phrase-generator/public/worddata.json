@@ -10,7 +10,7 @@
     ],
     "phrases": [
         "A {noun} is ka {noun}",
-        "A {noun} wiad ned so heiß gessn wie's gekocht wiad",
+        "A {noun:gender_female} wiad nie so heiß gessn wie's gekocht wiad",
         "Glauben hast nix wissen",
         "Samma nd päpstlicher ois {noun:article_d}",
         "Stimmts oder hob i {noun:article_e}",

@@ -52,7 +52,7 @@ export default function Home() {
                 console.log('type: ' + type);
                 switch (type) {
                     case 'noun':
-                        wordData = getRandomNoun(nouns)
+                        wordData = getRandomNoun(nouns, args[1])
                         break
                     default:
                         break
@@ -84,7 +84,20 @@ export default function Home() {
 
         setPhrase(randomPhrase)
     }
-    function getRandomNoun(nouns) {
+    function getRandomNoun(nouns, arg) {
+        if (arg) {
+            switch(arg) {
+                case 'gender_male':
+                    nouns = nouns.filter(n => n.gender == 'male')
+                    break
+                case 'gender_female':
+                    nouns = nouns.filter(n => n.gender == 'female')
+                    break
+                case 'gender_thing':
+                    nouns = nouns.filter(n => n.gender == 'thing')
+                    break
+            }
+        }
         return nouns[Math.floor(Math.random() * nouns.length)]
     }
     function getRandomPhrase(phrases) {
